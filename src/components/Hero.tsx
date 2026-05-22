@@ -111,12 +111,14 @@ export default function Hero({ onNavigate }: HeroProps) {
         >
             {[
               { icon: GithubIcon, href: "https://github.com", label: "GitHub" },
-              { icon: LinkedinIcon, href: "https://linkedin.com", label: "LinkedIn" },
-              { icon: FileText, href: "#", label: "Resume" },
+              { icon: LinkedinIcon, href: "https://linkedin.com", label: "LinkedIn"},
+              { icon: FileText, href: "/resume.pdf", label: "Resume" },
             ].map(({ icon: Icon, href, label }) => (
             <a
               key={label}
               href={href}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label={label}
               className="group rounded-xl border border-border bg-surface-light/50 p-3 text-text-secondary transition-all hover:border-indigo-500/30 hover:text-indigo-400 hover:bg-indigo-500/10"
             >
