@@ -111,8 +111,8 @@ export default function Hero({ onNavigate }: HeroProps) {
         >
             {[
               { icon: GithubIcon, href: "https://github.com", label: "GitHub" },
-              { icon: LinkedinIcon, href: "https://linkedin.com", label: "LinkedIn"},
-              { icon: FileText, href: "/resume.pdf", label: "Resume" },
+              { icon: LinkedinIcon, href: "https://www.linkedin.com/in/srikanth-emmadi?utm_source=share_via&utm_content=profile&utm_medium=member_android", label: "LinkedIn"},
+              { icon: FileText, href: "/EMMADI-SRIKANTH.pdf", label: "Resume" },
             ].map(({ icon: Icon, href, label }) => (
             <a
               key={label}
