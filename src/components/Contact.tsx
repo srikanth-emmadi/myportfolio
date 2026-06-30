@@ -4,7 +4,7 @@ import { useState, type FormEvent } from "react";
 
 const contactInfo = [
   { icon: Mail, label: "Email", value: "esriakanth.011@gmail.com", href: "mailto:esriakanth.011@gmail.com" },
-  { icon: Phone, label: "Phone", value: "9959024711", href: "tel:+91 9959024711" },
+  { icon: Phone, label: "Phone", value: "+91 9959024711", href: "tel:+91 9959024711" },
   { icon: MapPin, label: "Location", value: "Patancheru, Hyd", href: "#" },
 ];
 
