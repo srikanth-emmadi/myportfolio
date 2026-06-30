@@ -8,17 +8,19 @@ router.post("/send-email", async (req, res) => {
 
   try {
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp-relay.brevo.com",
+      port: 587,
+      secure: false, // use TLS
       auth: {
-        user: process.env.MAIL_USER,
-        pass: process.env.MAIL_PASS,
+        user: process.env.BREVO_USER,     // usually your Brevo login email
+        pass: process.env.BREVO_PASS,     // SMTP key from Brevo
       },
     });
 
-    const info = await transporter.sendMail({
+    await transporter.sendMail({
       from: `"${name}" <${email}>`,
-      to: process.env.MAIL_USER,
-      subject: subject,
+      to: process.env.MAIL_USER, // your receiving email
+      subject,
       html: `
         <h3>New Contact Form Submission</h3>
         <p><strong>Name:</strong> ${name}</p>
@@ -28,10 +30,9 @@ router.post("/send-email", async (req, res) => {
       `,
     });
 
-    console.log("Email sent:", info.response);
     res.status(200).json({ success: true });
   } catch (error) {
-    console.error("Error sending email:", error); // 👈 log the real error
+    console.error("Error sending email:", error);
     res.status(500).json({ success: false, error: error.message });
   }
 });

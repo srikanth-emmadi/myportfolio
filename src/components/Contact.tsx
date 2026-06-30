@@ -27,8 +27,6 @@ export default function Contact() {
         body: JSON.stringify(formData),
       });
 
-      https://myportfolio-us0s.onrender.com
-
 
       if (res.ok) {
         setSubmitted(true);
