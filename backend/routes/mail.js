@@ -10,8 +10,9 @@ router.post("/send-email", async (req, res) => {
     const response = await axios.post(
       "https://api.brevo.com/v3/smtp/email",
       {
-        sender: { name, email },
+        sender: { name: "Portfolio Contact", email: process.env.MAIL_USER },
         to: [{ email: process.env.MAIL_USER }],
+
         subject,
         htmlContent: `
           <h3>New Contact Form Submission</h3>
