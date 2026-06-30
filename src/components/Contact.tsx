@@ -15,11 +15,19 @@ export default function Contact() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:5000/api/send-email", {
+      // const res = await fetch("http://localhost:5000/api/send-email", {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify(formData),
+      // });
+
+      const res = await fetch("https://myportfolio-us0s.onrender.com/api/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
+
+      https://myportfolio-us0s.onrender.com
 
 
       if (res.ok) {
