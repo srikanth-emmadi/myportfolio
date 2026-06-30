@@ -1,5 +1,5 @@
 import express from "express";
-import nodemailer from "nodemailer";
+import axios from "axios";
 
 const router = express.Router();
 
@@ -7,32 +7,32 @@ router.post("/send-email", async (req, res) => {
   const { name, email, subject, message } = req.body;
 
   try {
-    const transporter = nodemailer.createTransport({
-      host: "smtp-relay.brevo.com",
-      port: 587,
-      secure: false, // use TLS
-      auth: {
-        user: process.env.BREVO_USER,     // usually your Brevo login email
-        pass: process.env.BREVO_PASS,     // SMTP key from Brevo
+    const response = await axios.post(
+      "https://api.brevo.com/v3/smtp/email",
+      {
+        sender: { name, email },
+        to: [{ email: process.env.MAIL_USER }],
+        subject,
+        htmlContent: `
+          <h3>New Contact Form Submission</h3>
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Subject:</strong> ${subject}</p>
+          <p><strong>Message:</strong> ${message}</p>
+        `,
       },
-    });
+      {
+        headers: {
+          "api-key": process.env.BREVO_API_KEY,
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
-    await transporter.sendMail({
-      from: `"${name}" <${email}>`,
-      to: process.env.MAIL_USER, // your receiving email
-      subject,
-      html: `
-        <h3>New Contact Form Submission</h3>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Subject:</strong> ${subject}</p>
-        <p><strong>Message:</strong> ${message}</p>
-      `,
-    });
-
+    console.log("✅ Email sent:", response.data);
     res.status(200).json({ success: true });
   } catch (error) {
-    console.error("Error sending email:", error);
+    console.error("❌ Error sending email:", error.response?.data || error.message);
     res.status(500).json({ success: false, error: error.message });
   }
 });
