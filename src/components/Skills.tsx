@@ -58,7 +58,7 @@ const skillCategories = [
       { name: "NX/UG", level: 90 },
       { name: "SOLIDWORKS", level: 82 },
       { name: "PTC CREO", level: 88 },
-      ],
+    ],
   },
   {
     title: "CAE",
@@ -71,7 +71,6 @@ const skillCategories = [
   {
     title: "Tools & Others",
     skills: [
-      
       { name: "MS EXCEL", level: 75 },
       { name: "Drafting, GD&T", level: 85 },
       { name: "Design Optimization", level: 90 },
