@@ -11,10 +11,10 @@ const experiences = [
     description:
       "Results-driven CAD Engineer with expertise in creating optimized structural designs and mechanical components using AutoCAD and Creo. Proven track record in developing technical drawings for Pre-Engineered Buildings (PEBs), collaborating across teams, and managing project budgets to ensure on-time, cost-effective delivery.",
     achievements: [
-      "Analyzing project quotes and developing optimized structural designs for PEBs and heavy steel structures without compromising safety standards",
-      "Preparing detailed design drawings, structural reports, and Technical Material Lists (TMLs) for consultants and clients.",
-      "Collaborating with Sales, Production, and Erection teams to ensure seamless transition from design to site installation.",
-      "Overseeing site activities to ensure adherence to quality standards and national/international building codes.",
+      "Design and optimize heavy steel structures and PEB components.",
+      "Prepare detailed fabrication drawings and Technical Material Lists (TML).",
+      "Coordinate with production, sales, and site teams for successful project execution.",
+      "Ensure compliance with engineering standards and quality requirements.",
       "Identifying deviations in project scope and implementing cost-reduction measures to stay within budget"
     ],
     tech: ["AutoCAD", "PTC Creo", "SolidWorks"],
@@ -28,9 +28,11 @@ const experiences = [
     description:
       "Optimizing components using AutoCAD, PTC Creo, and SolidWorks.Boosted production efficiency by 30% and cut design iterations by 20% through precise 3D modeling and GD&T integration.",
     achievements: [
-      "Migrating and detailing associated 2D manufacturing drawings, ensuring all annotations, GD&T (Geometric Dimensioning & Tolerancing) symbols, and Bill of Materials (BOM) are correctly generated and linked to the new 3D models.",
-      "Collaborated with engineering and manufacturing teams to reduce design iterations by 20%, enhancing product quality and accuracy.",
-      "Conducted thorough measurements and analysis on 20+ projects, achieving 98% compliance with functional and production specifications.",
+      "Designed and optimized 100+ engineering components using Creo, Siemens NX, SolidWorks, and AutoCAD.",
+      "Created manufacturing drawings with GD&T and detailed annotations.",
+      "Generated BOMs and 2D production drawings from 3D models.",
+      "Collaborated with manufacturing teams to improve design quality and reduce iterations by 20%.",
+      "Conducted design verification to ensure compliance with functional and manufacturing requirements.",
     ],
     tech: ["AutoCAD", "PTC Creo", "SolidWorks"],
   },
@@ -44,7 +46,9 @@ const experiences = [
       "Creating 2D and 3D models for engineering projects, meeting industry standards and specs.",
     achievements: [
       "Enhanced CAD drafting skills through regular training programs.",
-      "Collaborated with cross-functional teams on 10 major equipment designs, driving project success.",
+      "Operated CNC Machines and optimized machine processes.",
+      "Performed machine setup, troubleshooting, and preventive maintenance.",
+      "Improved production efficiency and maintained high-quality standards.",
       "Optimized CAD software, reducing design rendering and modeling time by 20%.",
       "Supported senior designers in product redesigns, improving product aesthetics and user experience.",
     ],

@@ -51,8 +51,7 @@ export default function About() {
             About Me
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-text-secondary">
-            Passionate about building products that make a difference. I combine
-            technical expertise with product thinking to deliver exceptional results.
+            Mechanical CAD Engineer with 4+ years of experience in Product Design and Sheet Metal Design using PTC Creo. Experienced in developing sheet metal components, manufacturing drawings, GD&T application, BOM generation, and large assembly modeling. Strong knowledge of sheet metal manufacturing processes, Design for Manufacturing (DFM), and fabrication principles. Proficient in Creo 7.0, Windchill, Creo View, AutoCAD, Siemens NX, and SolidWorks. A collaborative team player committed to delivering high-quality, manufacturable designs.
           </p>
         </motion.div>
 

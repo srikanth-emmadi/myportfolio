@@ -2,6 +2,47 @@ import { motion } from "framer-motion";
 
 const skillCategories = [
   {
+    title: "Sheet Metal",
+    skills: [
+      { name: "Walls ", level: 95 },
+      { name: "Flanges ", level: 90 },
+      { name: "Bends ", level: 90 },
+      { name: "Hems ", level: 85 },
+      { name: "Corner Reliefs", level: 80 },
+      { name: "Flat Patterns", level: 80 },
+      { name: "Sheet Metal Modeling", level: 80 },
+    ],
+  },
+  {
+    title: "Drafting",
+    skills: [
+      { name: "Manufacturing Drawings ", level: 95 },
+      { name: "GD&T ", level: 90 },
+      { name: "BOM Generation  ", level: 90 },
+      { name: "Detailing ", level: 85 },
+    ],
+  },
+  {
+    title: "Design",
+    skills: [
+      { name: "Large Assemblies ", level: 95 },
+      { name: "Design Optimization ", level: 90 },
+      { name: "DFM ", level: 90 },
+      { name: "Engineering Drawings ", level: 85 },
+    ],
+  },
+  {
+    title: "Manufacturing",
+    skills: [
+      { name: "Sheet Metal Fabrication ", level: 95 },
+      { name: "Weldments ", level: 90 },
+      { name: "Light & Heavy Fabrication", level: 90 },
+      { name: "Laser Cutting ", level: 85 },
+      { name: "Bending ", level: 85 },
+      { name: "Welding ", level: 85 },
+    ],
+  },
+  {
     title: "CAD",
     skills: [
       { name: "AUTO CAD", level: 95 },
